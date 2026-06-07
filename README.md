@@ -42,7 +42,7 @@ Banking_bot/
 │   ├── src/
 │   │   ├── models/          # ML/NLP models
 │   │   ├── utils/           # Processing utilities
-│   │   ├── api.py           # Flask/FastAPI server
+│   │   ├── api.py           # FastAPI server
 │   │   └── training/        # Model training scripts
 │   ├── requirements.txt
 │   └── config.py
@@ -103,7 +103,7 @@ Banking_bot/
 - **GitHub Actions** for CI/CD
 - **Nginx** for reverse proxy
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+
@@ -111,51 +111,13 @@ Banking_bot/
 - MySQL 8.0+
 - Docker & Docker Compose (optional)
 
-### Installation
+### Installation Steps
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/gulshan0104/Banking_bot.git
-   cd Banking_bot
-   ```
-
-2. **Setup Database**
-   ```bash
-   mysql -u root -p < database/schema.sql
-   ```
-
-3. **Setup Backend**
-   ```bash
-   cd backend
-   npm install
-   npm run dev
-   ```
-
-4. **Setup Chatbot (Python)**
-   ```bash
-   cd chatbot
-   pip install -r requirements.txt
-   python src/api.py
-   ```
-
-5. **Setup Frontend**
-   ```bash
-   cd frontend
-   npm install
-   npm run dev
-   ```
-
-6. **Using Docker Compose**
-   ```bash
-   docker-compose up -d
-   ```
-
-## 📖 Documentation
-
+Detailed setup instructions coming soon. See documentation for:
+- [Full Setup Guide](./docs/SETUP.md)
+- [Database Setup](./docs/DATABASE.md)
 - [API Documentation](./docs/API.md)
-- [Database Schema](./docs/DATABASE.md)
-- [Setup Guide](./docs/SETUP.md)
-- [Chatbot Guide](./docs/CHATBOT.md)
+- [Chatbot Setup](./docs/CHATBOT.md)
 
 ## 🔐 Security Features
 
@@ -167,7 +129,7 @@ Banking_bot/
 - Rate limiting
 - SQL injection prevention
 
-## 📊 Features
+## 📊 Key Features
 
 - ✅ User authentication (JWT + OAuth2)
 - ✅ Banking data CRUD operations
@@ -179,31 +141,6 @@ Banking_bot/
 - ✅ Role-based access control (RBAC)
 - ✅ Audit logging
 
-## 🧪 Testing
-
-```bash
-# Backend tests
-cd backend
-npm run test
-
-# Frontend tests
-cd frontend
-npm run test
-
-# Integration tests
-npm run test:e2e
-```
-
-## 📝 Environment Variables
-
-See `.env.example` for required environment variables.
-
-## 🤝 Contributing
-
-1. Create a feature branch
-2. Make your changes
-3. Submit a pull request
-
 ## 📄 License
 
 MIT License
@@ -211,7 +148,3 @@ MIT License
 ## 👨‍💻 Author
 
 Gulshan Kumar (gulshan0104)
-
-## 📧 Support
-
-For questions or issues, please open a GitHub issue.
