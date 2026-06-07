@@ -1,0 +1,61 @@
+# GitHub Codespace Automated Setup
+# This file automatically sets up the development environment
+
+from "ghcr.io/devcontainers/features/github-cli:1" as github-cli
+from "ghcr.io/devcontainers/features/mysql:1" as mysql
+
+{
+  "name": "Banking Bot - Full Stack",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-focal",
+  
+  "features": {
+    "github-cli": {},
+    "mysql": {
+      "version": "8.0"
+    }
+  },
+  
+  "forwardPorts": [3000, 5000, 8000, 3306],
+  
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend (React)",
+      "onAutoForward": "notify"
+    },
+    "5000": {
+      "label": "Backend (Express)",
+      "onAutoForward": "notify"
+    },
+    "8000": {
+      "label": "Chatbot (FastAPI)",
+      "onAutoForward": "notify"
+    },
+    "3306": {
+      "label": "MySQL Database",
+      "onAutoForward": "silent"
+    }
+  },
+  
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "cweijan.vscode-mysql-client2",
+        "rangav.vscode-thunder-client",
+        "humao.rest-client",
+        "Vue.volar"
+      ],
+      "settings": {
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}
